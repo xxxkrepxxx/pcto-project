@@ -46,7 +46,7 @@ void tarot()
     while (z != 3)
     {
         srand(time(NULL));
-        int y1 = rand() % 12 + 1;
+        int y1 = rand() % 13 + 1;
 
         if (y1==1)
         {
@@ -134,6 +134,15 @@ void tarot()
             puts("\nThe Sun represents illumination and mental clarity. It symbolizes your ability to see things clearly and gain a profound understanding of situations.");
 
         }
+
+        else if (y1 == 13)
+        { 
+
+            puts(ANSI_COLOR_YELLOW"\nThe Hermit"ANSI_COLOR_RESET);
+            puts("\nThe lantern of the Hermit symbolizes the light of inner guidance. It may indicate that it is time to listen to your inner voice, follow your intuition, and find answers within yourself.");
+
+        }
+
         z=z+1;
         sleep(1);
     }
@@ -147,7 +156,7 @@ void dream()
 {
     char S[2000];
 
-    puts(ANSI_COLOR_BLUE "racconta cosa hai sognato!" ANSI_COLOR_RESET);
+    puts(ANSI_COLOR_BLUE "racconta cosa hai sognato! \n" ANSI_COLOR_RESET);
 
     fgets(S, sizeof(S), stdin);
     fgets(S, sizeof(S), stdin);
@@ -187,11 +196,6 @@ void dream()
     if (strstr(S,"amico") != NULL || strstr(S,"amici") != NULL || strstr(S,"mamma") != NULL || strstr(S,"papà")|| strstr(S,"nonna")|| strstr(S,"nonno")|| strstr(S,"zia")|| strstr(S,"zio")|| strstr(S,"professore")) 
     {
         puts("\nLa presenza di persone familiari nei sogni può riflettere i vostri legami emotivi, esperienze passate o aspetti della vostra personalità.");
-    }
-
-    if (strstr(S,"acqua") != NULL || strstr(S,"cascata") != NULL || strstr(S,"fiume") != NULL || strstr(S,"mare")|| strstr(S,"lago")|| strstr(S,"piscina")|| strstr(S,"pozzanghera")|| strstr(S,"pioggia")|| strstr(S,"tempesta")) 
-    {
-        puts("\nL'acqua nei sogni può simboleggiare le vostre emozioni, la vostra psiche o il flusso della vita. L'acqua calma può rappresentare tranquillità, mentre l'acqua agitata può indicare emozioni tumultuose.");
     }
 
     if (strstr(S,"acqua") != NULL || strstr(S,"cascata") != NULL || strstr(S,"fiume") != NULL || strstr(S,"mare")|| strstr(S,"lago")|| strstr(S,"piscina")|| strstr(S,"pozzanghera")|| strstr(S,"pioggia")|| strstr(S,"tempesta")) 
